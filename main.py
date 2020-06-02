@@ -36,3 +36,5 @@ for brand in brands[1:]:
     pay = job.find("td", {"class":"pay"}).get_text()
     date = job.find("td", {"class":"regDate"}).get_text()
     arr.append({"index":i+1,"place":place, "title":title, "time":time, "pay":pay, "date":date})
+  if save is True:
+    save_to_file(arr, company)
